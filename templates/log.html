@@ -1,0 +1,22 @@
+{%extends "index.html"%}
+
+{%block main%}
+<h2>Login {{error}}</h2>
+<form class="log"action="/log" method="post">
+    
+    
+    <div>
+        <label for="emailog">Email:</label>
+        <input type="email" id="emailreg" name="email" required>
+    </div>
+    <div>
+        <label for="passwordreg">Password:</label>
+        <input type="password" id="passwordreg" name="password" required>
+    </div>
+   
+    <div class="buttonsubmit">
+        <button type="submit" class="buttonsubmit">Login</button>
+    </div>
+</form>
+{%endblock%}
+        

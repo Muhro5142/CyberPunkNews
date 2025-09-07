@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Самые жаркие новости Найт-Сити из мира Cyberpunk 2077">
+    <link rel="stylesheet" href="static/css/style.css">
+    <title>2077 News - Submit Article</title>
+</head>
+<body>
+    <header>
+        <h1>2077 NEWS</h1>
+        
+        <div class="backtohome">
+            <a href="/" class="backtohome">Back to homepage</a>
+        </div>
+        
+        <div class="header-alert">Submit your hottest Night City news!</div>
+    </header>
+    
+    <div class="container">
+        <main class="content">
+            <h2 class="subarth2">Submit an article</h2>
+            
+            
+            {% if error %}
+            <div class="error" style="color: red; padding: 10px; margin-bottom: 15px;">{{ error }}</div>
+            {% endif %}
+
+            {% if success %}
+            <div class="success" style="color: green; padding: 10px; margin-bottom: 15px;">{{ success }}</div>
+            {% endif %}
+            
+            <div class="formsubmit">
+                <form class="submitart" action="/submitart" method="post">
+                    <div class="form-group">
+                        <textarea type="text" class="submitartinput" name="submitartinput" required></textarea>
+                    </div>
+                    <div class="form-group buttonsubmit">
+                        <button type="submit" class="buttonsubmit">Send</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
