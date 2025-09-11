@@ -27,6 +27,12 @@
         <main class="content">
             {%block main%}
             
+            {% if submit_status == 'success' %}
+            <div class="notice success">Статья отправлена и добавлена.</div>
+            {% elif submit_status == 'error' %}
+            <div class="notice error">Не удалось создать корректную статью. Попробуйте снова.</div>
+            {% endif %}
+
             <div class="articles">
                 {% for new in news %}
                 <section class="article">
