@@ -10,7 +10,7 @@
 <body>
     <header>
         
-        <h1 >2077 NEWS</h1>
+        <h1>2077 NEWS</h1>
         
         <a href="/submitart" class="submitart">Submit an article!</a>
         {% if test == None %}
@@ -21,16 +21,15 @@
             <input type="hidden" name="page" value="{{ page }}">
             <button type="submit" class="translation">ENG/RUS</button>
         </form>
-        
     </header>
     <div class="container">
         <main class="content">
             {%block main%}
             
             {% if submit_status == 'success' %}
-            <div class="notice success">Статья отправлена и добавлена.</div>
+            <div class="notice success">Report submitted and added.</div>
             {% elif submit_status == 'error' %}
-            <div class="notice error">Не удалось создать корректную статью. Попробуйте снова.</div>
+            <div class="notice error">Failed to generate a valid report. Try again.</div>
             {% endif %}
 
             <div class="articles">
